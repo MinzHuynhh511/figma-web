@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>N&amp;M Coffee</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <nav class="navbar">
+    <div class="navbar__inner">
+
+      <a class="navbar__logo" onclick="navigate('home')" href="#">
+        <img src="/img/logo.png" alt="N&M Coffee Logo"
+          onerror="this.outerHTML='<span style=\'color:#fff;font-weight:900;font-size:1.1rem;font-family:Georgia,serif\'>M</span>'">
+      </a>
+
+      <ul class="navbar__links">
+        <li><a onclick="showPage('menu')" href="#">Thực đơn</a></li>
+        <li><a onclick="showPage('deals')" href="#">Ưu đãi</a></li>
+        <li><a onclick="showPage('news')" href="#">Tin tức</a></li>
+      </ul>
+
+    </div>
+  </nav>
+  <section class="hero">
+    <div class="hero__left">
+
+      <div class="hero__brand">
+        <img class="hero__brand-logo" src="/img/logo.png" alt="logo">
+        <div>
+          <div class="hero__brand-nm">N&amp;M</div>
+          <div class="hero__brand-name">COFFEE</div>
+        </div>
+      </div>
+
+      <p class="hero__desc">
+        N&amp;M Coffee mang đến trải nghiệm cà phê và thức uống tươi mát
+        trong một không gian hiện đại, đầy cảm hứng. Mỗi sản phẩm được
+        chăm chút kỹ lưỡng, kết hợp hương vị tự nhiên và sự sáng tạo để
+        mang lại cảm giác thư giãn và trọn vẹn cho khách hàng.
+      </p>
+
+      <div class="hero__dots">
+        <span class="dot dot--active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+
+    <div class="hero__right">
+      <div class="hero__badge"></div>
+      <img class="hero__cup" src="/img/Lynuoctim.png" alt="ly nước">
+
+      <div class="hero__deco-fresh">FRESH</div>
+      <div class="hero__deco-latte">LATTE</div>
+    </div>
+  </section>
+
+
+  <section class="banner">
+    <img class="banner__left" src="/img/Lytradao.png" alt="trà đào">
+
+    <div class="banner__text">
+      <div class="banner__title">TRÀ ĐÀO</div>
+      <div class="banner__sub">Dâng trào cảm hứng</div>
+      <div class="banner__price">Chỉ 35,000 đ</div>
+    </div>
+
+    <img class="banner__right" src="/img/minimal-view-apricot-fruit-removebg-preview.png" alt="trang trí">
+  </section>
+
+
+  <div class="main">
+    <aside class="sidebar">
+      <div class="sidebar__title">Menu</div>
+      <ul id="sidebarList">
+      </ul>
+    </aside>
+    <main id="content" class="content"></main>
+  </div>
+
+
+  <footer>
+    <div class="footer__inner">
+
+      <div class="footer__brand">
+        <img class="footer__logo" src="/img/logo.png" alt="logo">
+        <div>
+          <div class="footer__nm">N&amp;M</div>
+          <div class="footer__name">COFFEE</div>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Chính sách &amp; điều khoản</h4>
+        <ul>
+          <li>Điều khoản dịch vụ</li>
+          <li>Chính sách bảo mật</li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>N&amp;M Coffee</h4>
+        <ul>
+          <li>Địa chỉ: 108 Cao Lỗ, Quận 8, TP.HCM</li>
+        </ul>
+      </div>
+
+      <div class="footer__socials">
+        <a href="#" class="social-btn">💬</a>
+        <a href="#" class="social-btn">f</a>
+        <a href="#" class="social-btn">📞</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
