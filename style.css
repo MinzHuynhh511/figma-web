@@ -93,8 +93,10 @@ ul {
 
 .hero {
   display: grid;
-  grid-template-columns: 1fr 42%;
-  min-height: 300px;
+  grid-template-columns: 1fr 400px; /* Cố định chiều rộng cột ảnh để không bị giãn */
+  max-width: 1200px;                /* Giới hạn độ rộng giống Main */
+  margin: 0 auto;                   /* Căn giữa toàn bộ khối */
+  min-height: 450px;
 
   background:
     radial-gradient(circle at top left,
@@ -110,6 +112,7 @@ ul {
     );
 
   position: relative;
+  border-radius: 20px;              /* Thêm bo góc cho giống Figma */
   overflow: hidden;
 }
 
@@ -249,17 +252,17 @@ ul {
 }
 
 .hero__brand-name{
-  font-size:1.9rem;
+  font-size:2.5rem;
   font-weight:900;
   color:var(--red);
   letter-spacing:3px;
 }
 
 .hero__desc{
-  font-size:.9rem;
-  line-height:1.9;
+  font-size:1rem;
+  line-height:1.6;
   color:#5f5967;
-  max-width:420px;
+  max-width: 500px;
 }
 
 
@@ -364,21 +367,24 @@ ul {
 
 
 .banner {
-  background: var(--yellow);
+  max-width: 1200px;                /* Giới hạn độ rộng */
+  margin: 1rem auto;                /* Căn giữa và tạo khoảng cách trên dưới */
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: .8rem 4vw;
-  min-height: 140px;
-  overflow: hidden;
+  justify-content: center;          /* Đưa nội dung vào giữa thay vì đẩy ra 2 biên */
+  gap: 3rem;                        /* Tạo khoảng cách cố định giữa hình và chữ */
+  background: var(--yellow);
+  border-radius: 20px;
+  min-height: 180px;
 }
 
 
 .banner__left {
-  height: clamp(90px, 14vw, 130px);
+  height: 200px;        /* Tăng từ 130px lên 200px */
   width: auto;
   object-fit: contain;
   flex-shrink: 0;
+  transform: scale(1.2); /* Phóng to nhẹ để tạo hiệu ứng tràn viền */
 }
 
 
@@ -391,13 +397,14 @@ ul {
 
 .banner__text {
   text-align: center;
-  flex: 1;
+  flex: none;
   padding: 0 1rem;
 }
 
 .banner__title {
   font-family: 'Dancing Script', cursive;
-  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-size: 4rem;
+  margin-bottom: -10px;
   color: var(--red);
   line-height: 1;
 }
@@ -498,18 +505,18 @@ ul {
 /* ── CONTENT ─────────────────────────────── */
 .content {
   min-height: 400px;
-  animation: fadeIn .25s ease;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out; /* Thêm transition mượt mà */
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(6px)
+    transform: translateY(10px); /* Đẩy nhẹ từ dưới lên */
   }
-
   to {
     opacity: 1;
-    transform: translateY(0)
+    transform: translateY(0);
   }
 }
 

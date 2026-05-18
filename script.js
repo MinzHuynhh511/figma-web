@@ -184,6 +184,7 @@ if (sidebarList) {
 // Hàm hiển thị nội dung theo từng trang (Trang chủ / Thực đơn / Ưu đãi / Tin tức)
 function showPage(page, cat) {
   const el = document.getElementById('content');
+  const mainSection = document.querySelector('.main');
   if (!el) return;
 
   if (page === 'home') {
@@ -228,7 +229,10 @@ function showPage(page, cat) {
   el.style.animation = 'none';
   el.offsetHeight; // Ép trình duyệt render lại cấu trúc nhằm kích hoạt hiệu ứng
   el.style.animation = '';
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  //window.scrollTo({ top: 0, behavior: 'smooth' });
+  if (mainSection) {
+    mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 }
 
 // Hàm xử lý đổi trạng thái tô đậm (Active) của danh mục trên thanh Sidebar
