@@ -535,7 +535,9 @@ ul {
 .promo-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: clamp(.6rem, 1.5vw, 1.2rem);
+  gap: 1.5rem;
+  max-width: 1000px;   /* Giới hạn độ rộng của toàn bộ khối poster */
+  margin: 0 auto;      /* Căn giữa */
 }
 
 .promo-card {
@@ -554,8 +556,10 @@ ul {
 
 .promo-card img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 225px;      /* Cố định chiều cao (bạn có thể chỉnh lên 300px nếu muốn to hơn chút) */
+  object-fit: cover;   /* Giúp hình ảnh không bị méo khi co lại */
+  border-radius: 15px;
+  display: block;
 }
 
 /* Danh sách món */
@@ -583,13 +587,12 @@ ul {
 
 /* ★ Kích thước ảnh tròn trong card món */
 .menu-item__img {
-  width: clamp(60px, 8vw, 90px);
-  height: clamp(60px, 8vw, 90px);
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
-  background: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+  width: 80px;         /* Thu nhỏ chiều rộng */
+  height: 80px;        /* Thu nhỏ chiều cao */
+  object-fit: contain; /* Giữ nguyên tỉ lệ hình ảnh món ăn */
+  border-radius: 8px;
+  background: #fff;
+  padding: 5px;
 }
 
 .menu-item__name {

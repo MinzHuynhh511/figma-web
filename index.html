@@ -17,15 +17,14 @@
   <nav class="navbar">
     <div class="navbar__inner">
 
-      <a class="navbar__logo" onclick="navigate('home')" href="#">
-        <img src="/img/logo.png" alt="N&M Coffee Logo"
-          onerror="this.outerHTML='<span style=\'color:#fff;font-weight:900;font-size:1.1rem;font-family:Georgia,serif\'>M</span>'">
-      </a>
+    <a class="navbar__logo" onclick="event.preventDefault(); showPage('home', null, false)" href="#">
+      <img src="/img/logo.png" alt="N&M Coffee Logo">
+    </a>
 
     <ul class="navbar__links">
-      <li><a onclick="event.preventDefault(); showPage('menu')" href="#">Thực đơn</a></li>
-      <li><a onclick="event.preventDefault(); showPage('deals')" href="#">Ưu đãi</a></li>
-      <li><a onclick="event.preventDefault(); showPage('news')" href="#">Tin tức</a></li>
+      <li><a onclick="event.preventDefault(); showPage('menu', null, true)" href="#">Thực đơn</a></li>
+      <li><a onclick="event.preventDefault(); showPage('deals', null, true)" href="#">Ưu đãi</a></li>
+      <li><a onclick="event.preventDefault(); showPage('news', null, true)" href="#">Tin tức</a></li>
     </ul>
 
     </div>
